@@ -8,7 +8,7 @@ public class Main {
         int[] expenses = {12000, 15000, 11000, 13000, 14000};
 
         int total = 0;
-        for (int expense: expenses) {
+        for (int expense : expenses) {
             total += expense;
         }
         System.out.println("Сумма трат за месяц составила " + total + " рублей.");
@@ -20,7 +20,7 @@ public class Main {
         int min = monthlyExpenses[0];
         int max = monthlyExpenses[0];
 
-        for (int expense: monthlyExpenses) {
+        for (int expense : monthlyExpenses) {
             if (expense < min) {
                 min = expense;
             }
@@ -36,7 +36,7 @@ public class Main {
         int[] expensesForMonth = {12000, 15000, 11000, 13000, 14000};
 
         int totalSum = 0;
-        for (int expense: expensesForMonth){
+        for (int expense : expensesForMonth) {
             totalSum += expense;
         }
 
@@ -46,12 +46,19 @@ public class Main {
 
         System.out.println("// Task 4");
 
-        char [] reverseFullName = {'n', 'a', 'v', 'I',' ', 'v','o','n', 'a','v', 'I'} ;
-        for (int letter = reverseFullName.length -1; letter >= 0; letter--){
-            System.out.print(reverseFullName [letter]);
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+
+        int length = reverseFullName.length;
+
+        for (int letter = 0; letter < length / 2; letter ++) {
+            char temp = reverseFullName[letter];
+            reverseFullName[letter] = reverseFullName[length - 1 - letter];
+            reverseFullName[length - 1 - letter] = temp;
 
         }
 
-    }
+        System.out.print(reverseFullName);
+
+}
 
 }
